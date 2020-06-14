@@ -1,10 +1,10 @@
 const path = require("path");
 
 module.exports = {
-    entry: './src/js/app.js',
+    entry: './src/js/App.js',
     output: {
         filename: "bundle.min.js",
-        path: path.resolve(__dirname, "./dist/js")
+        path: path.resolve(__dirname, "./dist/src/js")
     },
     watch: false,
     mode: 'production',
@@ -23,4 +23,4 @@ module.exports = {
             }
         ]
     }
-}
+};

@@ -10,6 +10,7 @@ const csso          = require("gulp-csso");
 const browserSync   = require("browser-sync").create();
 const webpack       = require("webpack");
 const fileinclude   = require('gulp-file-include');
+const react         = require('gulp-react');
 
 sass.compiler = require('sass'); ////node-sass dla klasycznego
 
@@ -42,7 +43,7 @@ const showError = function(err) {
 function server(cb) {
     browserSync.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "./dist/src"
         },
         notify: false,
         host: "192.168.1.192",
@@ -67,7 +68,7 @@ const css = function() {
         }))
         .pipe(csso())
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest("dist/src/css"))
         .pipe(browserSync.stream());
 };
 
@@ -86,7 +87,7 @@ const html = function(cb) {
             prefix: '@@',
             basepath: '@file'
         }))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/src'))
 };
 
 const htmlReload = function(cb) {
