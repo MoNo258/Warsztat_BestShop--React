@@ -51,17 +51,20 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 
-import Navigation from "./Navigation";
+import Header from "./Header";
+import Banner from "./Banner";
 
-const App= () => {
+
+import Footer from "./Footer";
+
+const App = () => {
     return (
         <>
-            <Navigation />
+            <Header />
+            <Banner />
+            <Footer />
         </>
     )
-}
+};
 
-    ReactDOM.render(
-    <App />,
-    document.getElementById("app")
-    );
+ReactDOM.render(<App />, document.getElementById("app"));
