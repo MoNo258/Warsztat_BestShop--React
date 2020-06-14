@@ -52,16 +52,22 @@ import React, {Component} from "react";
 import ReactDOM from "react-dom";
 
 import Header from "./Header";
-import Banner from "./Banner";
-
-
+import Hero from "./Hero";
+import SectionStats from "./SectionStats";
+import SectionBenefits from "./SectionBenefits";
+import SectionPricing from "./SectionPricing";
+import SectionContact from "./SectionContact";
 import Footer from "./Footer";
 
 const App = () => {
     return (
         <>
             <Header />
-            <Banner />
+            <Hero />
+            <SectionStats />
+            <SectionBenefits />
+            <SectionPricing />
+            <SectionContact />
             <Footer />
         </>
     )
