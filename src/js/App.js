@@ -52,7 +52,7 @@ import React, {Component} from "react";
 import ReactDOM from "react-dom";
 
 import Header from "./Header";
-import Hero from "./Hero";
+import HeroBanner from "./HeroBanner";
 import SectionStats from "./SectionStats";
 import SectionBenefits from "./SectionBenefits";
 import SectionPricing from "./SectionPricing";
@@ -63,7 +63,7 @@ const App = () => {
     return (
         <>
             <Header />
-            <Hero />
+            <HeroBanner />
             <SectionStats />
             <SectionBenefits />
             <SectionPricing />
