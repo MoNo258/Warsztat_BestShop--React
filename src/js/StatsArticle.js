@@ -33,10 +33,10 @@ const articleParams = [
 class StatsArticle extends Component {
     render() {
         return (
-            <article className="stats-card">
+            <>
                 {articleParams.map(param => {
                     return (
-                        <>
+                        <article className='stats-card'>
                             <div className={param.divClass}>
                                 <img src={param.imgSrc} alt="" className={param.imgClass}/>
                             </div>
@@ -46,10 +46,10 @@ class StatsArticle extends Component {
                             <p className={param.paragraphClass}>
                                 {param.paragraphText}
                             </p>
-                        </>
+                        </article>
                     )
                 })}
-            </article>
+            </>
         )
     }
 }
